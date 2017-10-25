@@ -15,7 +15,11 @@ buildscript {
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
@@ -34,3 +38,4 @@ dependencies {
     compile 'com.facebook.react:react-native:+'
     compile files('libs/BaiduLBS_Android.jar')
 }
+
